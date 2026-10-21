@@ -1,8 +1,6 @@
 import pytest
-import sys
 
-sys.path.append(r"c:\Users\jaime\OneDrive\Escritorio\Python")  # Ensure the path to Algoritmica is added
-from Algoritmica.P4 import Candidato_iterativo
+from majority_candidate import Candidato_iterativo
 
 
 @pytest.mark.parametrize(
