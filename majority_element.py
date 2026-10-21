@@ -1,8 +1,11 @@
+"""Elemento mayoritario (aparece más de n/2 veces) mediante divide y vencerás: O(n).
+
+Se reduce el array emparejando elementos consecutivos iguales y se comprueba al final
+si el candidato obtenido es realmente mayoritario.
+"""
 import time
+
 import matplotlib.pyplot as plt
-
-# Description: Algoritmo que busca un elemento mayoritario en un array
-
 
 def Mayoritario3(A, i, j):
     B = []
@@ -91,4 +94,5 @@ def graficar_casos():
     plt.show()
 
 
-# graficar_casos()
+if __name__ == "__main__":
+    graficar_casos()
