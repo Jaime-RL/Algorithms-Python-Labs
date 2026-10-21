@@ -1,6 +1,12 @@
+"""Puzzle de las ranas: intercambiar dos grupos de fichas (1 y -1) separadas por un hueco (0).
+
+Cada ficha solo avanza hacia delante, deslizándose al hueco o saltando sobre una ficha contraria.
+Se resuelve con un esquema recursivo y con su transformación a iterativo, mostrando el
+tablero en cada paso con colores ANSI.
+"""
 # Implementación de los algoritmos
 def Recursivo(A, hueco, ficha, m):
-    if m >= len(A) - 2:  # ESSENCILLO
+    if m >= len(A) - 2:  # ES_SENCILLO
         Mostrar(A)
         return 0
     else:  # C(RECURSIVO(F(x)), x)
@@ -20,7 +26,7 @@ def Recursivo(A, hueco, ficha, m):
 
 
 """RECURSIVO(x): 
-    if ESSENCILLO(x): 
+    if ES_SENCILLO(x): 
         y ← DIRECTO(x) 
     else: 
         y ← C(RECURSIVO(F(x)), x) 
@@ -28,7 +34,7 @@ def Recursivo(A, hueco, ficha, m):
 
 ITERATIVO(x): 
     x´ ← x 
-    while not ESSENCILLO(x´): 
+    while not ES_SENCILLO(x´): 
         x´ ← F´(x) 
     y ← DIRECTO(x´) 
     while x´ ≠ x: 
@@ -73,8 +79,8 @@ def Mostrar(A):
     print("\n" + s)
 
 
-# Llamada a los algoritmos
-A = [-1, -1, 0, 1, 1]
-print("Recursivo: ", Recursivo(A, 2, 1, 0))
-A = [1, 1, 0, -1, -1]
-print("Iterativo: ", Iterativo(A, True))
+if __name__ == "__main__":
+    A = [-1, -1, 0, 1, 1]
+    print("Movimientos (recursivo): ", Recursivo(A, 2, 1, 0))
+    A = [1, 1, 0, -1, -1]
+    print("Movimientos (iterativo): ", Iterativo(A, True))
