@@ -81,6 +81,6 @@ def Mostrar(A):
 
 if __name__ == "__main__":
     A = [-1, -1, 0, 1, 1]
-    print("Movimientos (recursivo): ", Recursivo(A, 2, 1, 0))
+    print("Recursivo: ", Recursivo(A, 2, 1, 0))
     A = [1, 1, 0, -1, -1]
-    print("Movimientos (iterativo): ", Iterativo(A, True))
+    print("Iterativo: ", Iterativo(A, True))
