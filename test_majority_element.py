@@ -1,5 +1,5 @@
 import pytest
-from P2 import Candidato
+from majority_element import Candidato
 
 
 @pytest.mark.parametrize(
